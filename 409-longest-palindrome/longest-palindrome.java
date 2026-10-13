@@ -1,10 +1,10 @@
 class Solution {
     public int longestPalindrome(String s) {
-        HashMap<String, Integer> map = new HashMap<>();
-        String[] word = s.split("");
+        HashMap<Character, Integer> map = new HashMap<>();
+        
         int totalLength = 0;
         boolean hasOdd = false;
-        for(String words : word){
+        for(char words : s.toCharArray()){
             map.put(words, map.getOrDefault(words,0)+1);
         }
         
